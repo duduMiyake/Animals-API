@@ -1,0 +1,75 @@
+body{
+    background-color: cornflowerblue;  
+ }
+
+ h1{
+    color: aliceblue;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+    text-align: center;
+    margin-top: 2%;
+    font-size: 80px;
+ }
+
+ h2{
+    color: aliceblue;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+    text-align: center;
+    margin-top: 2%;
+    font-size: 30px;
+ }
+
+ h3{
+    color: aliceblue;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+    text-align: center;
+    margin-top: 2%;
+    font-size: 15px;
+ }
+
+ h4{
+    color: aliceblue;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+    text-align: center;
+    margin-top: 2%;
+    font-size: 30px;
+ }
+
+ .input-group{
+    width: 800px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .btn-outline-secondary{
+    color: azure;
+    border-color: aliceblue;
+ }
+
+ #resultado{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ #imagem{
+    border-radius: 5%;
+    width: 22%;
+    height: 22%;
+ }
