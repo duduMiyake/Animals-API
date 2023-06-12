@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <title>Validação de E-mail</title>
+    </head>
+    <body>
+        <div>
+            <h3>Validação de E-mail</h3>
+            <form id="form" action="#">
+                <div class="inputBox">
+                    <input
+                        type="text"
+                        name=""
+                        id="email"
+                        placeholder="endereço de e-mail"
+                        onkeydown="validacao()"
+                    />
+                    <span id="text"></span>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript">
+            function validacao() {
+                var form = document.getElementById("form");
+                var email = document.getElementById("email").value;
+                var text = document.getElementById("text");
+
+                fetch(
+                    "https://apilayer.net/api/check?access_key=7cdccf2d5d1c9b7fa3c67da263881f70&email=" +
+                        email
+                )
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        if (data.format_valid && data.mx_found) {
+                            form.classList.add("valido");
+                            form.classList.remove("invalido");
+                            text.innerHTML = "Seu endereço de e-mail é válido";
+                            text.style.color = "#00ff00";
+                        } else {
+                            form.classList.remove("valido");
+                            form.classList.add("invalido");
+                            text.innerHTML =
+                                "Por favor, insira um e-mail válido";
+                            text.style.color = "#ff0000";
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+        </script>
+    </body>
+</html>
